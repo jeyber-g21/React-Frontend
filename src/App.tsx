@@ -1,18 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+// import { useState } from "react";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
 import "./App.css";
 
 import HeaderPage from "./components/header";
 import Slider from "./components/slider";
 import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
-import Header from "./components/miComponente";
-import ListaPeliculas from "./components/peliculas";
+// import Header from "./components/miComponente";
+// import ListaPeliculas from "./components/peliculas";
 import AppRoutes from "./routes/appRoutes";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
@@ -26,7 +26,7 @@ function App() {
               <AppRoutes />
             </main>
 
-            <a href="https://vite.dev" target="_blank">
+            {/* <a href="https://vite.dev" target="_blank">
               <img src={viteLogo} className="logo" alt="Vite logo" />
             </a>
             <a href="https://react.dev" target="_blank">
@@ -47,7 +47,7 @@ function App() {
             <div>
               <Header />
               <ListaPeliculas />
-            </div>
+            </div> */}
           </section>
           <Sidebar />
 

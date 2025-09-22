@@ -1,5 +1,5 @@
 import reactLogo from "../assets/react.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function HeaderPage() {
   return (
@@ -18,16 +18,44 @@ function HeaderPage() {
           <nav id="menu">
             <ul>
               <li>
-                <Link to="/">Inicio</Link>{" "}
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "link-activo" : "link"
+                  }
+                >
+                  Inicio
+                </NavLink>
               </li>
               <li>
-                <a href="blog.html">Blog</a>
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    isActive ? "link-activo" : "link"
+                  }
+                >
+                  Blog
+                </NavLink>
               </li>
               <li>
-                <a href="formulario.html">Formulario</a>
+                <NavLink
+                  to="/formulario"
+                  className={({ isActive }) =>
+                    isActive ? "link-activo" : "link"
+                  }
+                >
+                  Formulario
+                </NavLink>
               </li>
               <li>
-                <Link to="/peliculas">Películas</Link> |{" "}
+                <NavLink
+                  to="/peliculas"
+                  className={({ isActive }) =>
+                    isActive ? "link-activo" : "link"
+                  }
+                >
+                  Peliculas
+                </NavLink>
               </li>
               <li>
                 <a href="#">Pagina 2</a>

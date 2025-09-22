@@ -1,7 +1,7 @@
 function Home() {
   return (
     <>
-      <h1>INICIO Pagina</h1>
+      <h1>Ultimos archivos</h1>
     </>
   );
 }
