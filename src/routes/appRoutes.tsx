@@ -5,6 +5,7 @@ import NotFound from "../components/errorPage";
 import PeliculaDetalle from "../components/peliculaDetalle";
 import Blog from "../components/blog";
 import Formulario from "../components/formulario";
+
 export default function AppRoutes() {
   return (
     <Routes>

@@ -19,6 +19,7 @@ function Formulario() {
   return (
     <>
       <h1>Formulario page</h1>
+
       <form className="mid-form" onSubmit={manejarSubmit}>
         <div className="form-group">
           <label htmlFor="nombre">Nombre</label>
