@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logoReact from "../assets/react.svg";
 
 function Home() {
   type Article = {
@@ -25,9 +26,21 @@ function Home() {
       <h2>Lista de usuarios</h2>
       <ul>
         {articles.map((u) => (
-          <li key={u._id}>
-            {u.title} - {u.image}
-          </li>
+          <div id="articles">
+            <article className="article-item">
+              <div className="image-wrap">
+                {u.image ? (
+                  <img src={u.image} alt={u.title} />
+                ) : (
+                  <img src={logoReact} alt="Imagen por defecto" />
+                )}
+              </div>
+
+              <h2>{u.title}</h2>
+
+              <div className="clearfix"></div>
+            </article>
+          </div>
         ))}
       </ul>
     </>
