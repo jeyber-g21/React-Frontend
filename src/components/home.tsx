@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import logoReact from "../assets/react.svg";
+import { formatDistanceToNow } from "date-fns";
+import { es } from "date-fns/locale";
+import { Link } from "react-router-dom";
 
 function Home() {
   type Article = {
@@ -24,10 +27,10 @@ function Home() {
   return (
     <>
       <h2>Lista de usuarios</h2>
-      <ul>
-        {articles.map((u) => (
-          <div id="articles">
-            <article className="article-item">
+      {articles.length > 0 ? (
+        <div id="articles">
+          {articles.map((u) => (
+            <article className="article-item" key={u._id}>
               <div className="image-wrap">
                 {u.image ? (
                   <img src={u.image} alt={u.title} />
@@ -37,12 +40,23 @@ function Home() {
               </div>
 
               <h2>{u.title}</h2>
+              <span className="date">
+                {formatDistanceToNow(new Date(u.createdAt), {
+                  addSuffix: true,
+                  locale: es,
+                })}
+              </span>
+              <Link to={`/blog/${u._id}`}>{u.title}</Link>
 
               <div className="clearfix"></div>
             </article>
-          </div>
-        ))}
-      </ul>
+          ))}
+        </div>
+      ) : (
+        <div className="subheader">
+          <h2>No hay artículos disponibles</h2>
+        </div>
+      )}
     </>
   );
 }

@@ -11,7 +11,7 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/peliculas" element={<Peliculas />} />
-      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:id" element={<Blog />} />
       <Route path="/formulario" element={<Formulario />} />
       {/* Ruta dinámica con parámetro id */}
       <Route path="/peliculas/:id" element={<PeliculaDetalle />} />
