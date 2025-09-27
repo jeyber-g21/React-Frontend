@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [query, setQuery] = useState("");
@@ -16,9 +17,12 @@ function Sidebar() {
     <aside id="sidebar">
       <div id="nav-blog" className="sidebar-item">
         <h3>Puedes hacer esto</h3>
-        <a href="#" className="btn btn-success">
+        {/* <a href="#" className="btn btn-success">
           Crear artículo
-        </a>
+        </a> */}
+        <Link className="btn btn-succes" to={`/crear_articulo`}>
+          Crear artículo
+        </Link>
       </div>
 
       <div id="search" className="sidebar-item">

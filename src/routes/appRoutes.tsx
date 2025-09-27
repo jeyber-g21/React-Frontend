@@ -6,11 +6,15 @@ import PeliculaDetalle from "../components/peliculaDetalle";
 import Blog from "../components/blog";
 import Formulario from "../components/formulario";
 import Buscador from "../components/buscador";
-
+import ArticleById from "../components/articlebyid";
+import Create from "../components/createArticle";
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/crear_articulo" element={<Create />} />
+
+      <Route path="/:id" element={<ArticleById />} />
       <Route path="/peliculas" element={<Peliculas />} />
       <Route path="/blog/:id" element={<Blog />} />
       <Route path="/formulario" element={<Formulario />} />

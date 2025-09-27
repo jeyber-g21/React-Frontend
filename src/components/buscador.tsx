@@ -1,5 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import logoReact from "../assets/react.svg";
+import { formatDistanceToNow } from "date-fns";
+import { es } from "date-fns/locale";
+import { Link } from "react-router-dom";
 
 function Buscador() {
   const { title } = useParams(); // obtiene el título desde la URL
@@ -22,16 +26,34 @@ function Buscador() {
   return (
     <div>
       <h2>Resultados de: {title}</h2>
-      {results.length > 0 ? (
-        results.map((a) => (
-          <div key={a._id}>
-            <h3>{a.title}</h3>
-            <p>{a.content}</p>
-          </div>
-        ))
-      ) : (
-        <p>No hay resultados</p>
-      )}
+      <div id="articles">
+        {results.length > 0 ? (
+          results.map((u) => (
+            <article className="article-item" key={u._id}>
+              <div className="image-wrap">
+                {u.image ? (
+                  <img src={u.image} alt={u.title} />
+                ) : (
+                  <img src={logoReact} alt="Imagen por defecto" />
+                )}
+              </div>
+
+              <h2>{u.title}</h2>
+              <span className="date">
+                {formatDistanceToNow(new Date(u.createdAt), {
+                  addSuffix: true,
+                  locale: es,
+                })}
+              </span>
+              <Link to={`/blog/${u._id}`}>{u.title}</Link>
+
+              <div className="clearfix"></div>
+            </article>
+          ))
+        ) : (
+          <p>No existen articulos con ese nombre</p>
+        )}
+      </div>
     </div>
   );
 }
