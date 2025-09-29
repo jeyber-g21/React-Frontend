@@ -8,12 +8,13 @@ import Formulario from "../components/formulario";
 import Buscador from "../components/buscador";
 import ArticleById from "../components/articlebyid";
 import Create from "../components/createArticle";
+import Edit from "../components/editArticle";
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/crear_articulo" element={<Create />} />
-
+      <Route path="/editar_articulo/:id" element={<Edit />} />
       <Route path="/:id" element={<ArticleById />} />
       <Route path="/peliculas" element={<Peliculas />} />
       <Route path="/blog/:id" element={<Blog />} />

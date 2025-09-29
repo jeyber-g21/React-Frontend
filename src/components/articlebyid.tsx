@@ -1,10 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { es } from "date-fns/locale";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 function ArticleById() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   type Article = {
     _id: string;
@@ -37,6 +40,35 @@ function ArticleById() {
   }, [id]);
 
   if (!articleDetail) return <p>Cargando artículo...</p>;
+  const handleDelete = async () => {
+    const result = await Swal.fire({
+      title: "¿Estás seguro?",
+      text: "No podrás recuperar este artículo",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar",
+    });
+
+    if (result.isConfirmed) {
+      try {
+        const res = await fetch(`http://localhost:3000/api/articles/${id}`, {
+          method: "DELETE",
+        });
+
+        if (res.ok) {
+          Swal.fire("Eliminado", "El artículo ha sido eliminado ✅", "success");
+          navigate("/");
+        } else {
+          Swal.fire("Error", "No se pudo eliminar el artículo ❌", "error");
+        }
+      } catch (error) {
+        Swal.fire("Error", "Hubo un problema con el servidor ❌", "error");
+      }
+    }
+  };
   return (
     <>
       <div className="center">
@@ -58,8 +90,16 @@ function ArticleById() {
             </span>
             <p>{articleDetail.content}</p>
             <div className="buttons">
-              <a className="btn btn-warning">Editar</a>
-              <a className="btn btn-danger">Borrar</a>
+              {/* <a className="btn btn-warning">Editar</a> */}
+              <Link
+                className="btn btn-succes"
+                to={`/editar_articulo/${articleDetail._id}`}
+              >
+                Editar
+              </Link>
+              <a onClick={handleDelete} className="btn btn-danger">
+                Borrar
+              </a>
             </div>
             <div className="clearfix"></div>
           </article>
