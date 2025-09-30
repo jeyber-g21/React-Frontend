@@ -1,4 +1,5 @@
 import reactLogo from "../assets/react.svg";
+import Notas from "../assets/notas.svg";
 import { NavLink } from "react-router-dom";
 
 function HeaderPage() {
@@ -8,9 +9,9 @@ function HeaderPage() {
         <div className="center">
           {/* LOGO  */}
           <div id="logo">
-            <img src={reactLogo} className="app-logo" alt="Logotipo" />
+            <img src={Notas} className="app-logo" alt="Logotipo" />
             <span id="brand">
-              <strong>Curso</strong>React
+              <strong>Articles</strong>.PRO
             </span>
           </div>
 
@@ -24,7 +25,7 @@ function HeaderPage() {
                     isActive ? "link-activo" : "link"
                   }
                 >
-                  Inicio
+                  Home
                 </NavLink>
               </li>
               <li>
@@ -34,7 +35,7 @@ function HeaderPage() {
                     isActive ? "link-activo" : "link"
                   }
                 >
-                  Blog
+                  Last Articles
                 </NavLink>
               </li>
               <li>
@@ -44,7 +45,7 @@ function HeaderPage() {
                     isActive ? "link-activo" : "link"
                   }
                 >
-                  Formulario
+                  Form Page
                 </NavLink>
               </li>
               <li>
@@ -54,11 +55,8 @@ function HeaderPage() {
                     isActive ? "link-activo" : "link"
                   }
                 >
-                  Peliculas
+                  Reading
                 </NavLink>
-              </li>
-              <li>
-                <a href="#">Pagina 2</a>
               </li>
             </ul>
           </nav>
