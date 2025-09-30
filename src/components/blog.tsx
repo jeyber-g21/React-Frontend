@@ -37,18 +37,26 @@ function Blog() {
   if (!articleDetail) return <p>Cargando artículo...</p>;
   return (
     <>
-      <div className="center">
-        <section id="content">
-          <article className="article-item article-detail">
-            <div className="image-wrap">
-              <img
-                src={articleDetail.image}
-                alt={articleDetail.title}
-                width="300"
-              />
-            </div>
-          </article>
-        </section>
+      <div className="center-form">
+        <article className="article-item article-detail">
+          <div className="image-wrap">
+            <img
+              src={articleDetail.image}
+              alt={articleDetail.title}
+              width="300"
+            />
+          </div>
+          <br></br>
+          <br></br>
+          <h2>
+            <strong>{articleDetail.title}</strong>
+            <hr></hr>
+          </h2>
+          <br></br>
+          <p>{articleDetail.content}</p>
+        </article>
+
+        <div className="clearfix"></div>
       </div>
     </>
   );

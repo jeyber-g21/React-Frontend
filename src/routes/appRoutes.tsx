@@ -9,6 +9,7 @@ import Buscador from "../components/buscador";
 import ArticleById from "../components/articlebyid";
 import Create from "../components/createArticle";
 import Edit from "../components/editArticle";
+import LastArticles from "../components/lastArticles";
 export default function AppRoutes() {
   return (
     <Routes>
@@ -17,6 +18,7 @@ export default function AppRoutes() {
       <Route path="/editar_articulo/:id" element={<Edit />} />
       <Route path="/:id" element={<ArticleById />} />
       <Route path="/peliculas" element={<Peliculas />} />
+      <Route path="/Last-articles" element={<LastArticles />} />
       <Route path="/blog/:id" element={<Blog />} />
       <Route path="/formulario" element={<Formulario />} />
       {/* Ruta dinámica con parámetro id */}

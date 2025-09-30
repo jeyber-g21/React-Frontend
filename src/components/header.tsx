@@ -1,4 +1,3 @@
-import reactLogo from "../assets/react.svg";
 import Notas from "../assets/notas.svg";
 import { NavLink } from "react-router-dom";
 
@@ -30,7 +29,7 @@ function HeaderPage() {
               </li>
               <li>
                 <NavLink
-                  to="/blog"
+                  to="/Last-articles"
                   className={({ isActive }) =>
                     isActive ? "link-activo" : "link"
                   }
@@ -49,14 +48,14 @@ function HeaderPage() {
                 </NavLink>
               </li>
               <li>
-                <NavLink
+                {/* <NavLink
                   to="/peliculas"
                   className={({ isActive }) =>
                     isActive ? "link-activo" : "link"
                   }
                 >
                   Reading
-                </NavLink>
+                </NavLink> */}
               </li>
             </ul>
           </nav>

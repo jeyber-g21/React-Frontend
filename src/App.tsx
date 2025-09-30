@@ -18,18 +18,18 @@ function App() {
     <>
       <div>
         <HeaderPage />
-        <Slider />
+        {/* <Slider />
         <div className="center">
-          <section id="content">
-            {/* // CARGA CADA COMPONENTE CON REACT ROUTER */}
-            <main>
-              <AppRoutes />
-            </main>
-          </section>
+          <section id="content"> */}
+        {/* // CARGA CADA COMPONENTE CON REACT ROUTER */}
+        <main>
+          <AppRoutes />
+        </main>
+        {/* </section>
           <Sidebar />
 
           <div className="clearfix"></div>
-        </div>
+        </div> */}
         <Footer />
       </div>
     </>

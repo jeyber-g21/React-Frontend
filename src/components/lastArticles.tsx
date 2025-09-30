@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Slider from "./slider";
 import Sidebar from "./sidebar";
 
-function Home() {
+function LastArticles() {
   type Article = {
     _id: string;
     title: string;
@@ -18,7 +18,7 @@ function Home() {
   const [articles, setArticles] = useState<Article[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/articles")
+    fetch("http://localhost:3000/api/articles/last")
       .then((res) => res.json())
       .then((data) => {
         //console.log("Artículos recibidos:", data);
@@ -32,7 +32,7 @@ function Home() {
       <div className="center">
         <section id="content">
           <h2>
-            <strong>Articles</strong>
+            <strong>Last Articles</strong>
           </h2>
           {articles.length > 0 ? (
             <div id="articles">
@@ -73,4 +73,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default LastArticles;
