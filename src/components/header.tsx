@@ -1,4 +1,4 @@
-import Notas from "../assets/notas.svg";
+import Notas from "../assets/notas2.png";
 import { NavLink } from "react-router-dom";
 
 function HeaderPage() {
@@ -39,12 +39,12 @@ function HeaderPage() {
               </li>
               <li>
                 <NavLink
-                  to="/formulario"
                   className={({ isActive }) =>
                     isActive ? "link-activo" : "link"
                   }
+                  to={`/crear_articulo`}
                 >
-                  Form Page
+                  New Article
                 </NavLink>
               </li>
               <li>

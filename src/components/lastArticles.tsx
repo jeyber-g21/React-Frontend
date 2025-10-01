@@ -3,7 +3,7 @@ import logoReact from "../assets/react.svg";
 import { formatDistanceToNow } from "date-fns";
 import { es } from "date-fns/locale";
 import { Link } from "react-router-dom";
-import Slider from "./slider";
+
 import Sidebar from "./sidebar";
 
 function LastArticles() {
@@ -28,16 +28,15 @@ function LastArticles() {
   }, []);
   return (
     <>
-      <Slider />
       <div className="center">
-        <section id="content">
+        <section id="content" className="lastArticles">
           <h2>
             <strong>Last Articles</strong>
           </h2>
           {articles.length > 0 ? (
             <div id="articles">
               {articles.map((u) => (
-                <article className="article-item" key={u._id}>
+                <article className="article-item card" key={u._id}>
                   <div className="image-wrap">
                     {u.image ? (
                       <img src={u.image} alt={u.title} />
@@ -66,7 +65,9 @@ function LastArticles() {
             </div>
           )}
         </section>
-        <Sidebar />
+        <div className="sidebarLast">
+          <Sidebar />
+        </div>
         <div className="clearfix"></div>
       </div>
     </>

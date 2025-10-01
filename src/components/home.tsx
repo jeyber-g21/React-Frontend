@@ -35,9 +35,9 @@ function Home() {
             <strong>Articles</strong>
           </h2>
           {articles.length > 0 ? (
-            <div id="articles">
+            <div id="articles" className="articleSection">
               {articles.map((u) => (
-                <article className="article-item" key={u._id}>
+                <article className="article-item card" key={u._id}>
                   <div className="image-wrap">
                     {u.image ? (
                       <img src={u.image} alt={u.title} />

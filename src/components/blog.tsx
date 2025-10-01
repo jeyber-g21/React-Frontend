@@ -38,7 +38,7 @@ function Blog() {
   return (
     <>
       <div className="center-form">
-        <article className="article-item article-detail">
+        <article className="article-detail">
           <div className="image-wrap">
             <img
               src={articleDetail.image}
@@ -47,7 +47,7 @@ function Blog() {
             />
           </div>
           <br></br>
-          <br></br>
+
           <h2>
             <strong>{articleDetail.title}</strong>
             <hr></hr>

@@ -9,10 +9,12 @@ function Slider() {
             <img src={Notes} className="app-logo" alt="Logotipo" />
           </div>
           <div className="right">
-            <h1>
-              Bienvenido al Curso de React con Víctor Robles de
-              victorroblesweb.es
-            </h1>
+            <h1>Inspírate, crea y sorprende</h1>
+            <p>
+              Aquí no solo encuentras artículos únicos, también un espacio para
+              dar rienda suelta a tu creatividad. Transforma ideas en realidad y
+              convierte objetos comunes en piezas con tu propio estilo.
+            </p>
           </div>
         </div>
       </div>

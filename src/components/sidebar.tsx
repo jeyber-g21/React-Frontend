@@ -20,7 +20,7 @@ function Sidebar() {
         {/* <a href="#" className="btn btn-success">
           Crear artículo
         </a> */}
-        <Link className="btn btn-succes" to={`/crear_articulo`}>
+        <Link className="btn" to={`/crear_articulo`}>
           Crear artículo
         </Link>
       </div>
