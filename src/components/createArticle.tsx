@@ -57,9 +57,11 @@ function Create() {
       <div className="center-form">
         <section id="content">
           <h2>Crear Articulo</h2>
-          No necesitas ser un experto para diseñar algo increíble. Inspírate,
-          personaliza y dale vida a tus ideas con artículos únicos que llevan tu
-          sello personal. 🚀 <strong>Empieza a crear</strong>
+          <p>
+            No necesitas ser un experto para diseñar algo increíble. Inspírate,
+            personaliza y dale vida a tus ideas con artículos únicos que llevan
+            tu sello personal. 🚀 <strong>Empieza a crear</strong>
+          </p>
           <hr />
           <div className="card2">
             <form

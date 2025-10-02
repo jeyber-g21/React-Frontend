@@ -18,6 +18,7 @@ function ArticleById() {
     __v: number;
   };
   const [articleDetail, setArticlesDetail] = useState<Article | null>(null);
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
     if (!id) return;
@@ -26,18 +27,51 @@ function ArticleById() {
       try {
         const res = await fetch(`http://localhost:3000/api/articles/${id}`);
         if (!res.ok) {
-          throw new Error("Error al traer el artículo");
+          if (res.status === 500) {
+            throw new Error("Error interno del servidor. Intenta más tarde.");
+          } else if (res.status === 404) {
+            throw new Error("Artículo no encontrado.");
+          } else {
+            throw new Error("Ocurrió un error inesperado.");
+          }
         }
+
         const data = await res.json();
         console.log("Artículo recibido:", data);
         setArticlesDetail(data); // ✅ aquí el backend ya devuelve el objeto directamente
-      } catch (error) {
-        console.error(error);
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          console.error(error.message);
+          setError(error.message);
+        } else if (typeof error === "string") {
+          console.error(error);
+          setError(error);
+        } else {
+          console.error("Error desconocido", error);
+          setError("Ocurrió un error inesperado.");
+        }
       }
     };
 
     getArticle();
   }, [id]);
+
+  // 👇 Renderizado condicional
+  if (error) {
+    return (
+      <div className="center-Error">
+        <h1>⚠️ 500 - Server Error</h1>
+        <p>{error}</p>
+        <div className="btnMov">
+          <a href="/" className="btn">
+            Volver al inicio
+          </a>
+        </div>
+
+        <div className="clearfix"></div>
+      </div>
+    );
+  }
 
   if (!articleDetail) return <p>Cargando artículo...</p>;
   const handleDelete = async () => {
@@ -71,39 +105,44 @@ function ArticleById() {
   };
   return (
     <>
-      <div className="center">
-        <section id="content">
-          <article className="article-item article-detail">
-            <div className="image-wrap">
-              <img
-                src={articleDetail.image}
-                alt={articleDetail.title}
-                width="300"
-              />
-            </div>
-            <h1 className="subheader">{articleDetail.title}</h1>
-            <span className="date">
-              {formatDistanceToNow(new Date(articleDetail.createdAt), {
-                addSuffix: true,
-                locale: es,
-              })}
-            </span>
-            <p>{articleDetail.content}</p>
-            <div className="buttons">
-              {/* <a className="btn btn-warning">Editar</a> */}
-              <Link
-                className="btn btn-succes"
-                to={`/editar_articulo/${articleDetail._id}`}
-              >
-                Editar
-              </Link>
-              <a onClick={handleDelete} className="btn btn-danger">
-                Borrar
-              </a>
-            </div>
-            <div className="clearfix"></div>
-          </article>
-        </section>
+      <div className="center-form">
+        <article className="article-detail">
+          <div className="image-wrap">
+            <img
+              src={articleDetail.image}
+              alt={articleDetail.title}
+              width="300"
+            />
+          </div>
+          <br></br>
+
+          <h2>
+            <strong>{articleDetail.title}</strong>
+          </h2>
+          <span className="date">
+            {formatDistanceToNow(new Date(articleDetail.createdAt), {
+              addSuffix: true,
+              locale: es,
+            })}
+            <hr></hr>
+          </span>
+          <br></br>
+          <p>{articleDetail.content}</p>
+          <div className="buttons">
+            {/* <a className="btn btn-warning">Editar</a> */}
+            <Link
+              className="btnEdit"
+              to={`/editar_articulo/${articleDetail._id}`}
+            >
+              Editar
+            </Link>
+            <a onClick={handleDelete} className="btnDelete">
+              Borrar
+            </a>
+          </div>
+        </article>
+
+        <div className="clearfix"></div>
       </div>
     </>
   );

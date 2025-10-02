@@ -28,8 +28,8 @@ function LastArticles() {
   }, []);
   return (
     <>
-      <div className="center">
-        <section id="content" className="lastArticles">
+      <div className="center-form">
+        <section id="content">
           <h2>
             <strong>Last Articles</strong>
           </h2>
@@ -65,9 +65,9 @@ function LastArticles() {
             </div>
           )}
         </section>
-        <div className="sidebarLast">
-          <Sidebar />
-        </div>
+
+        <Sidebar />
+
         <div className="clearfix"></div>
       </div>
     </>

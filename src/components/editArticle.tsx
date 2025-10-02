@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import Sidebar from "./sidebar";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
@@ -54,48 +55,63 @@ function Edit() {
   };
   return (
     <>
-      <div className="center">
+      <div className="center-form">
         <section id="content">
-          <h2>Crear Articulo</h2>
+          <h2>Edit Article</h2>
+          <p>
+            Cada detalle cuenta. Editar un artículo no es solo corregir, es
+            darle una nueva oportunidad para brillar. Ajusta, mejora y
+            transforma tu idea hasta convertirla en algo que realmente refleje
+            lo que quieres compartir.
+          </p>
           <hr />
-          <form onSubmit={handleSubmit} className="mid-form">
-            <div className="form-group">
-              <label htmlFor="nombre">Titulo</label>
-              <input
-                type="text"
-                id="nombre"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                required
-              />
-            </div>
+          <div className="card2">
+            <form onSubmit={handleSubmit} className="mid-form">
+              <div className="form-group">
+                <label htmlFor="nombre">Titulo</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  required
+                />
+              </div>
 
-            <div className="form-group">
-              <label htmlFor="apellidos">contenido</label>
-              <textarea
-                placeholder="Contenido del artículo..."
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-                rows={5} // 🔹 controlas el alto del textarea
-                required
-              />
-            </div>
+              <div className="form-group">
+                <label htmlFor="apellidos">contenido</label>
+                <textarea
+                  placeholder="Contenido del artículo..."
+                  value={content}
+                  onChange={(e) => setContent(e.target.value)}
+                  rows={5} // 🔹 controlas el alto del textarea
+                  required
+                />
+              </div>
 
-            <div className="form-group">
-              <label>Imagen:</label>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={(e) => setImage(e.target.files?.[0] || null)}
-              />
-            </div>
+              <div className="form-group">
+                <input
+                  type="file"
+                  className="file-input"
+                  accept="image/*"
+                  onChange={(e) => setImage(e.target.files?.[0] || null)}
+                />
+              </div>
 
-            <div className="clearfix"></div>
-            <br></br>
-
-            <input type="submit" value="Enviar" className="btn btn-success" />
-          </form>
+              <div className="clearfix"></div>
+              <br></br>
+              <div className="btnMov">
+                <input
+                  type="submit"
+                  value="Enviar"
+                  className="btn btn-success"
+                />
+              </div>
+            </form>
+          </div>
         </section>
+        <Sidebar />
+        <div className="clearfix"></div>
       </div>
     </>
   );
