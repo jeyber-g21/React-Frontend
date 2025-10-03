@@ -4,8 +4,8 @@
 import "./App.css";
 
 import HeaderPage from "./components/header";
-import Slider from "./components/slider";
-import Sidebar from "./components/sidebar";
+// import Slider from "./components/slider";
+// import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
 // import Header from "./components/miComponente";
 // import ListaPeliculas from "./components/peliculas";

@@ -56,7 +56,7 @@ main {
   background: rgba(255, 0, 0, 0.05);
   border: 1px solid #ff4d4d;
   border-radius: 8px;
-  margin: 7%;
+  margin: 7% auto;
 }
 .center-Error .btn {
   background: linear-gradient(90deg, rgb(244, 194, 110), #ff8000);
@@ -220,6 +220,13 @@ main {
 }
 
 #content {
+  width: 70%;
+  float: left;
+  min-height: 520px;
+  margin-right: 60px;
+  margin-top: 2%;
+}
+#content2 {
   width: 70%;
   float: left;
   min-height: 520px;
@@ -603,23 +610,87 @@ textarea {
 }
 
 /*RESPONSIVE*/
-
-/*Desde la anchura 963px hasta la anchura 1488px de pantalla*/
-@media (max-width: 1488px) {
+@media (max-width: 1500px) {
   /*Se ejecutarán estos estilos*/
   .center {
     width: 85%;
   }
+  .right p {
+    width: 65%;
+  }
+  #content {
+    width: 100%;
+  }
+  .articleSection {
+    width: 100%;
+  }
+  #sidebar {
+    margin: 0 37%;
+  }
+  #content .card2 {
+    margin-bottom: 3%;
+  }
+  .center-form {
+    margin-top: 7%;
+  }
+  #content2 {
+    width: 90%;
+  }
+}
+
+/*Desde la anchura 963px hasta la anchura 1488px de pantalla*/
+@media (max-width: 1280px) {
+  /*Se ejecutarán estos estilos*/
+  .center {
+    width: 85%;
+  }
+  .right p {
+    width: 75%;
+  }
+  #content {
+    width: 100%;
+  }
+  .articleSection {
+    width: 90%;
+  }
+  #sidebar {
+    margin: 0 37%;
+  }
+  #content .card2 {
+    margin-bottom: 3%;
+  }
+  .center-form {
+    margin-top: 7%;
+  }
 }
 
 /*Desde la anchura 0px hasta la anchura 963px de pantalla*/
-@media (max-width: 1314px) {
+@media (max-width: 1024px) {
   .center {
     width: 95%;
+  }
+  .right p {
+    width: 85%;
   }
 
   #menu ul {
     width: auto;
+  }
+  #content {
+    width: 100%;
+  }
+  .articleSection {
+    width: 90%;
+  }
+  #sidebar {
+    margin: 0 37%;
+  }
+  .center-form {
+    margin-top: 7%;
+  }
+  .center-Error {
+    width: 80%;
+    margin: 9% auto 0%;
   }
 }
 
@@ -629,6 +700,18 @@ textarea {
     width: 240px;
     margin: 0px auto;
     margin-top: 20px;
+  }
+  #header {
+    height: 83px;
+  }
+  #container {
+    margin-top: 14%;
+  }
+  .right p {
+    width: 90%;
+  }
+  .articleSection {
+    width: 90%;
   }
 
   #menu,
@@ -666,11 +749,18 @@ textarea {
     padding: 1.5rem;
     margin-bottom: 1rem;
   }
+  .center-form {
+    margin-top: 18%;
+  }
+  .center-Error {
+    width: 80%;
+    margin: 16% auto 1%;
+  }
 }
 
 @media (max-width: 497px) {
   #header {
-    min-height: 130px;
+    min-height: 90px;
     overflow: hidden;
   }
 
@@ -682,6 +772,31 @@ textarea {
   #menu ul li {
     margin-left: 7px;
     margin-right: 7px;
+  }
+
+  #container {
+    margin-top: 23%;
+  }
+  .right p {
+    width: 100%;
+  }
+  #content2 {
+    margin-top: 95%;
+  }
+  .center-form {
+    margin-top: 30%;
+  }
+  #content .card2 .file-input {
+    font-size: 9px;
+  }
+  .articleSection {
+    width: 90%;
+  }
+  #sidebar {
+    margin: 0% auto;
+  }
+  .footer {
+    margin-top: 11%;
   }
 
   #slider {
@@ -703,5 +818,9 @@ textarea {
 
   #slider.slider-small h1 {
     padding-top: 35px;
+  }
+  .center-Error {
+    width: 60%;
+    margin: 26% auto -4%;
   }
 }

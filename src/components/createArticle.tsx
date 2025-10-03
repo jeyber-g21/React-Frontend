@@ -56,11 +56,11 @@ function Create() {
     <>
       <div className="center-form">
         <section id="content">
-          <h2>Crear Articulo</h2>
+          <h2>Create Article</h2>
           <p>
-            No necesitas ser un experto para diseñar algo increíble. Inspírate,
-            personaliza y dale vida a tus ideas con artículos únicos que llevan
-            tu sello personal. 🚀 <strong>Empieza a crear</strong>
+            ou don't need to be an expert to design something amazing. Get
+            inspired, customize, and bring your ideas to life with unique items
+            that bear your personal stamp. 🚀 <strong>Start creating</strong>
           </p>
           <hr />
           <div className="card2">
@@ -70,7 +70,7 @@ function Create() {
               encType="multipart/form-data"
             >
               <div className="form-group">
-                <label htmlFor="nombre">Titulo</label>
+                <label htmlFor="nombre">Title</label>
                 <input
                   type="text"
                   id="nombre"
@@ -81,7 +81,7 @@ function Create() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="apellidos">contenido</label>
+                <label htmlFor="apellidos">content</label>
                 <textarea
                   placeholder=""
                   value={content}
@@ -103,7 +103,7 @@ function Create() {
               <div className="clearfix"></div>
               <br></br>
               <div className="btnMov">
-                <input type="submit" value="Enviar" className="btn" />
+                <input type="submit" value="SAVE" className="btn" />
               </div>
             </form>
           </div>

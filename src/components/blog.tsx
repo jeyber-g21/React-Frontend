@@ -28,11 +28,11 @@ function Blog() {
         const res = await fetch(`http://localhost:3000/api/articles/${id}`);
         if (!res.ok) {
           if (res.status === 500) {
-            throw new Error("Error interno del servidor. Intenta más tarde.");
+            throw new Error("Internal server error. Please try again later.");
           } else if (res.status === 404) {
-            throw new Error("Artículo no encontrado.");
+            throw new Error("Artícle not found.");
           } else {
-            throw new Error("Ocurrió un error inesperado.");
+            throw new Error("An unexpected error occurred.");
           }
         }
 
@@ -47,8 +47,8 @@ function Blog() {
           console.error(error);
           setError(error);
         } else {
-          console.error("Error desconocido", error);
-          setError("Ocurrió un error inesperado.");
+          console.error("Unknown Error", error);
+          setError("An unexpected error occurred.");
         }
       }
     };
@@ -62,7 +62,7 @@ function Blog() {
         <p>{error}</p>
         <div className="btnMov">
           <a href="/" className="btn">
-            Volver al inicio
+            Go Home Page
           </a>
         </div>
 
@@ -70,18 +70,18 @@ function Blog() {
       </div>
     );
   }
-  if (!articleDetail) return <p>Cargando artículo...</p>;
+  if (!articleDetail) return <p>Waiting for article...</p>;
 
   const handleDelete = async () => {
     const result = await Swal.fire({
-      title: "¿Estás seguro?",
-      text: "No podrás recuperar este artículo",
+      title: "Are yo sure?",
+      text: "You will not be able to recover this article",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#d33",
       cancelButtonColor: "#3085d6",
-      confirmButtonText: "Sí, eliminar",
-      cancelButtonText: "Cancelar",
+      confirmButtonText: "Yes, delete",
+      cancelButtonText: "Cancel",
     });
 
     if (result.isConfirmed) {
@@ -91,13 +91,13 @@ function Blog() {
         });
 
         if (res.ok) {
-          Swal.fire("Eliminado", "El artículo ha sido eliminado ✅", "success");
+          Swal.fire("Deleted", "The article has been deleted ✅", "success");
           navigate("/");
         } else {
-          Swal.fire("Error", "No se pudo eliminar el artículo ❌", "error");
+          Swal.fire("Error", "The article could not be deleted.❌", "error");
         }
       } catch (error) {
-        Swal.fire("Error", "Hubo un problema con el servidor ❌", "error");
+        Swal.fire("Error", "There was a problem with the server ❌", "error");
       }
     }
   };
@@ -132,10 +132,10 @@ function Blog() {
               className="btnEdit"
               to={`/editar_articulo/${articleDetail._id}`}
             >
-              Editar
+              Edit
             </Link>
             <a onClick={handleDelete} className="btnDelete">
-              Borrar
+              Delete
             </a>
           </div>
         </article>

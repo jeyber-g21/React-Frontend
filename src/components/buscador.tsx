@@ -28,11 +28,11 @@ function Buscador() {
     <div>
       <div className="center-form">
         <section id="content">
-          <h2>Resultados de: {title}</h2>
+          <h2>Results of: {title}</h2>
           <p>
-            Estos son los artículos que encontramos para ti. Explora, descubre
-            nuevas ideas y encuentra justo lo que necesitas para inspirarte o
-            comenzar a crear tu propio proyecto.
+            These are the articles we found for you. Explore, discover new
+            ideas, and find just what you need to get inspired or start creating
+            your own project.
             <hr></hr>
           </p>
           <div id="articles" className="articleSection">
@@ -62,7 +62,7 @@ function Buscador() {
                 </article>
               ))
             ) : (
-              <p>No existen articulos con ese nombre</p>
+              <p>There are no articles with that name.</p>
             )}
           </div>
         </section>

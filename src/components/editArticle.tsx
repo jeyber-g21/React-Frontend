@@ -59,16 +59,16 @@ function Edit() {
         <section id="content">
           <h2>Edit Article</h2>
           <p>
-            Cada detalle cuenta. Editar un artículo no es solo corregir, es
-            darle una nueva oportunidad para brillar. Ajusta, mejora y
-            transforma tu idea hasta convertirla en algo que realmente refleje
-            lo que quieres compartir.
+            Every detail counts. Editing an article isn't just about correcting
+            it, it's giving it a new opportunity to shine. Adjust, improve, and
+            transform your idea until it becomes something that truly reflects
+            what you want to share.
           </p>
           <hr />
           <div className="card2">
             <form onSubmit={handleSubmit} className="mid-form">
               <div className="form-group">
-                <label htmlFor="nombre">Titulo</label>
+                <label htmlFor="nombre">Title</label>
                 <input
                   type="text"
                   id="nombre"
@@ -79,7 +79,7 @@ function Edit() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="apellidos">contenido</label>
+                <label htmlFor="apellidos">content</label>
                 <textarea
                   placeholder="Contenido del artículo..."
                   value={content}
@@ -101,11 +101,7 @@ function Edit() {
               <div className="clearfix"></div>
               <br></br>
               <div className="btnMov">
-                <input
-                  type="submit"
-                  value="Enviar"
-                  className="btn btn-success"
-                />
+                <input type="submit" value="SAVE" className="btn btn-success" />
               </div>
             </form>
           </div>

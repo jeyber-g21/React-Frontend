@@ -30,7 +30,7 @@ function Home() {
     <>
       <Slider />
       <div className="center">
-        <section id="content">
+        <section id="content2">
           <h2>
             <strong>Articles</strong>
           </h2>

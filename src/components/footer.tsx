@@ -4,11 +4,11 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-brand">
           <h2>Articles.PRO</h2>
-          <p>Pequeñas cosas, grandes soluciones</p>
+          <p>Get inspired, create and surprise</p>
         </div>
 
         <div className="footer-links">
-          <h3>Contacto</h3>
+          <h3>Contact</h3>
           <ul>
             <li>
               <a href="mailto:tuemail@gmail.com">📧 gomezjeyber@gmail.com</a>
@@ -33,11 +33,11 @@ function Footer() {
         </div>
 
         <div className="footer-extra">
-          <h3>Sobre mí</h3>
+          <h3>About me</h3>
           <p>
-            Desarrollador Full Stack con experiencia en React, Node.js y bases
-            de datos. Buscando nuevas oportunidades para crecer profesionalmente
-            🚀.
+            Full-stack developer with experience in Angular,Vuejs, React,
+            Node.js, Python/Django and databases. Looking for new opportunities
+            for professional growth. 🚀
           </p>
         </div>
       </div>

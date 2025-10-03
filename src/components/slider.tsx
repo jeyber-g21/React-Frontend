@@ -9,19 +9,19 @@ function Slider() {
             <img src={Notes} className="app-logo" alt="Logotipo" />
           </div>
           <div className="right">
-            <h1>Inspírate, crea y sorprende</h1>
+            <h1>Get inspired, create and surprise</h1>
             <p>
-              Aquí no solo encuentras artículos únicos, también un espacio para
-              dar rienda suelta a tu creatividad. Transforma ideas en realidad y
-              convierte objetos comunes en piezas con tu propio estilo.
+              Here you'll find not only unique items, but also a space to
+              unleash your creativity. Transform ideas into reality and turn
+              ordinary objects into pieces with your own style.
             </p>
             <p>
-              <strong>¿Tienes una idea en mente?</strong> No la dejes guardada.
-              Empieza aquí a crear tu propio artículo y dale vida a tu
-              creatividad. Cada gran proyecto comienza con un primer paso…{" "}
+              <strong>Do you have an idea in mind?</strong> Don't let it go.
+              Start here to create your own item and bring your creativity to
+              life. Every great project begins with a first step...{" "}
             </p>
             <p className="color">
-              <strong>👉 ¡Este es el tuyo! 📖✅🚀</strong>
+              <strong>👉 This one's for you! 📖✅🚀</strong>
             </p>
           </div>
         </div>

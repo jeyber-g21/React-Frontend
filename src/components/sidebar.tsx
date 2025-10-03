@@ -16,18 +16,18 @@ function Sidebar() {
   return (
     <aside id="sidebar">
       <div id="nav-blog" className="sidebar-item">
-        <h3>Puedes hacer esto</h3>
+        <h3>You can do this</h3>
         {/* <a href="#" className="btn btn-success">
           Crear artículo
         </a> */}
         <Link className="btn" to={`/crear_articulo`}>
-          Crear artículo
+          Create Article
         </Link>
       </div>
 
       <div id="search" className="sidebar-item">
-        <h3>Buscador</h3>
-        <p>Encuentra el artículo que buscas</p>
+        <h3>Search bar</h3>
+        <p>Find the article you are looking for</p>
         <form onSubmit={buscador}>
           <input
             type="text"
@@ -35,7 +35,7 @@ function Sidebar() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <input type="submit" name="submit" value="Buscar" className="btn" />
+          <input type="submit" name="submit" value="SEARCH" className="btn" />
         </form>
       </div>
     </aside>
