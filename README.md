@@ -135,3 +135,15 @@ The integration demonstrates proficiency in React + TypeScript, SweetAlert2 cust
 ## Search Article (Search Bar) Page
 
 ![Home Preview](./src/assets/SearchPage.jpeg);
+
+The Search Results page in Articles.PRO dynamically displays articles that match the user’s search query. Designed with a clean and intuitive interface, it allows users to quickly discover content by title or keyword.
+
+Each result is presented inside a responsive card layout featuring the article’s title, a brief description, and the publication date, providing a quick overview without overwhelming the user.
+
+## To conclude
+
+Articles.PRO represents a modern, user-centered web application that combines functionality, performance, and elegant design. Built with a component-based architecture in React and TypeScript, it demonstrates a clear understanding of scalability, modularity, and maintainability in front-end development.
+
+From the homepage to the search results, every section was crafted following UX/UI best practices — emphasizing clarity, consistency, and accessibility. The interface guides the user naturally through each interaction, ensuring an intuitive experience with well-structured layouts, balanced typography, and contrasting accent colors that highlight key actions such as creating or searching for articles.
+
+In summary, Articles.PRO is not just a technical project — it’s a reflection of thoughtful design and professional execution, merging aesthetic appeal with functional precision to deliver a delightful and productive user experience.
