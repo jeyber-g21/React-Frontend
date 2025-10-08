@@ -74,7 +74,7 @@ Articles.PRO offers a clean and modern interface designed to inspire creativity 
 
 ## video demonstration and explanation
 
-Youtbe video: [video](https://youtu.be/W51AyaRcj48)
+<a href="https://youtu.be/W51AyaRcj48" target="_blank">Youtbe video demonstration</a>
 
 ## Home Page
 
