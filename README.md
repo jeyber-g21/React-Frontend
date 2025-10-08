@@ -72,6 +72,10 @@ export default tseslint.config([
 
 Articles.PRO offers a clean and modern interface designed to inspire creativity and engagement.
 
+## video demonstration and explanation
+
+Youtbe video: [video](https://youtu.be/W51AyaRcj48)
+
 ## Home Page
 
 ![Home Preview](./src/assets/HomePage.jpeg);
