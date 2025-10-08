@@ -74,7 +74,10 @@ Articles.PRO offers a clean and modern interface designed to inspire creativity 
 
 ## video demonstration and explanation
 
-<a href="https://youtu.be/W51AyaRcj48" target="_blank">Youtbe video demonstration</a>
+## 🚀 useful links
+
+🔗 [Demo en vivo](https://youtu.be/W51AyaRcj48)  
+📦 [Repository Backend](https://github.com/jeyber-g21/Backend)
 
 ## Home Page
 
