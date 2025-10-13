@@ -65,7 +65,7 @@ function LastArticles() {
             </div>
           )}
         </section>
-
+        <hr></hr>
         <Sidebar />
 
         <div className="clearfix"></div>

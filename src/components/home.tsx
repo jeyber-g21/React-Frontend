@@ -31,6 +31,7 @@ function Home() {
       <Slider />
       <div className="center">
         <section id="content2">
+          <hr></hr>
           <h2>
             <strong>Articles</strong>
           </h2>
@@ -66,6 +67,7 @@ function Home() {
             </div>
           )}
         </section>
+
         <Sidebar />
         <div className="clearfix"></div>
       </div>

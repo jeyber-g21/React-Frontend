@@ -62,7 +62,7 @@ function Create() {
             inspired, customize, and bring your ideas to life with unique items
             that bear your personal stamp. 🚀 <strong>Start creating</strong>
           </p>
-          <hr />
+          <hr></hr>
           <div className="card2">
             <form
               className="mid-form"

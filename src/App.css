@@ -46,8 +46,11 @@ main {
 }
 
 .center-form {
-  width: 80%;
-  margin: 4% auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .center-Error {
   width: 80%;
@@ -130,14 +133,16 @@ main {
 }
 
 #slider {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;  */
-  /* gap: 10px; */
   margin-top: 90px;
   width: 100%;
   height: 600px;
   justify-content: center;
-  /*line-height: 320px;*/
+}
+#articles {
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
+  align-items: center;
 }
 
 #container {
@@ -146,7 +151,6 @@ main {
   gap: 10px;
   width: 100%;
   height: 600px;
-  /*line-height: 320px;*/
 }
 
 .left {
@@ -220,11 +224,15 @@ main {
 }
 
 #content {
-  width: 70%;
-  float: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;
+
   min-height: 520px;
-  margin-right: 60px;
-  margin-top: 2%;
+
+  margin-top: 4%;
 }
 #content2 {
   width: 70%;
@@ -235,11 +243,16 @@ main {
 }
 
 #content .card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: white;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   margin-top: 3%;
+  margin-bottom: 4%;
+  width: 70%;
 }
 
 #content .card2 input {
@@ -250,6 +263,7 @@ main {
   background: white;
   border-radius: 1rem;
 }
+
 /* CSS */
 #content .card2 .file-input {
   font-family: inherit;
@@ -341,7 +355,7 @@ main {
 #sidebar {
   width: 25%;
   float: left;
-  margin-top: 6%;
+  margin-top: 0%;
 }
 
 .sidebar-item {
@@ -439,19 +453,6 @@ textarea {
   margin-bottom: 10px;
   float: left;
 }
-
-/* #footer {
-  background: #f7f7f7;
-  width: 100%;
-  height: 100px;
-  line-height: 70px;
-  color: #444;
-}
-
-#footer p {
-  margin: 0px;
-  padding: 0px;
-} */
 
 .footer {
   background: #1f1f1f;
@@ -610,91 +611,75 @@ textarea {
 }
 
 /*RESPONSIVE*/
-@media (max-width: 1500px) {
-  /*Se ejecutarán estos estilos*/
+
+/*Desde la anchura 0px hasta la anchura 1025px de pantalla*/
+@media (min-width: 1025px) and (max-width: 1441px) {
+  .center-form .article-detail {
+    margin-top: 7%;
+  }
+  #sidebar {
+    margin-top: 0%;
+  }
+  #content {
+    margin-top: 6%;
+  }
+  #content2 {
+    width: 70%;
+    float: left;
+    min-height: 520px;
+    margin-right: 60px;
+    margin-top: 2%;
+  }
   .center {
     width: 85%;
+    margin: 0px auto;
+  }
+  .center #content2 {
+    margin-top: 4%;
+  }
+  #articles {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    align-items: center;
+  }
+  .articleSection {
+    width: 80%;
+  }
+}
+@media (min-width: 798px) and (max-width: 1025px) {
+  .center {
+    width: 100%;
   }
   .right p {
     width: 65%;
   }
-  #content {
-    width: 100%;
-  }
-  .articleSection {
-    width: 100%;
-  }
-  #sidebar {
-    margin: 0 37%;
-  }
-  #content .card2 {
-    margin-bottom: 3%;
-  }
-  .center-form {
-    margin-top: 7%;
-  }
   #content2 {
     width: 90%;
-  }
-}
-
-/*Desde la anchura 963px hasta la anchura 1488px de pantalla*/
-@media (max-width: 1280px) {
-  /*Se ejecutarán estos estilos*/
-  .center {
-    width: 85%;
-  }
-  .right p {
-    width: 75%;
+    margin-top: 8%;
   }
   #content {
     width: 100%;
   }
   .articleSection {
-    width: 90%;
+    width: 100%;
   }
   #sidebar {
     margin: 0 37%;
   }
   #content .card2 {
     margin-bottom: 3%;
-  }
-  .center-form {
-    margin-top: 7%;
-  }
-}
-
-/*Desde la anchura 0px hasta la anchura 963px de pantalla*/
-@media (max-width: 1024px) {
-  .center {
-    width: 95%;
-  }
-  .right p {
-    width: 85%;
-  }
-
-  #menu ul {
-    width: auto;
-  }
-  #content {
-    width: 100%;
-  }
-  .articleSection {
-    width: 90%;
-  }
-  #sidebar {
-    margin: 0 37%;
   }
   .center-form {
     margin-top: 7%;
   }
   .center-Error {
-    width: 80%;
-    margin: 9% auto 0%;
+    width: 70%;
+    margin-top: 12%;
   }
 }
 
-@media (max-width: 797px) {
+@media (max-width: 769px) {
   #logo {
     float: none;
     width: 240px;
@@ -741,14 +726,6 @@ textarea {
     font-size: 25px;
   }
 
-  .mid-form {
-    width: 70%;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-  }
   .center-form {
     margin-top: 18%;
   }
@@ -758,7 +735,7 @@ textarea {
   }
 }
 
-@media (max-width: 497px) {
+@media (min-width: 497px) and (max-width: 769px) {
   #header {
     min-height: 90px;
     overflow: hidden;
@@ -773,56 +750,174 @@ textarea {
     margin-left: 7px;
     margin-right: 7px;
   }
-
   #container {
-    margin-top: 23%;
-  }
-  .right p {
+    float: none;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     width: 100%;
   }
+  #container .left {
+    display: flex;
+    height: 600px;
+    overflow: hidden;
+  }
+  #container .right {
+    padding: 5%;
+  }
+  #container .right h1 {
+    font-size: 19px;
+    margin-top: -14%;
+  }
   #content2 {
-    margin-top: 95%;
     float: none;
     width: 100%;
   }
   .center-form {
-    margin-top: 30%;
+    margin-top: 16%;
+  }
+  .center-form #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;
+    float: none;
+    width: 100%;
+
+    min-height: 520px;
+
+    margin-top: 0%;
   }
   #content .card2 .file-input {
-    font-size: 9px;
-  }
-  .articleSection {
-    width: 90%;
-  }
-  #sidebar {
-    margin: 0% auto;
-  }
-  .footer {
-    margin-top: 11%;
-  }
-
-  #slider {
-    height: 180px;
-  }
-
-  #slider h1 {
-    font-size: 19px;
-    padding-top: 30px;
-  }
-
-  #slider .btn-white {
-    margin-top: 20px;
-  }
-
-  #slider.slider-small {
-    height: 100px;
-  }
-
-  #slider.slider-small h1 {
-    padding-top: 35px;
+    font-size: 14px;
   }
   .center-Error {
     width: 60%;
-    margin: 26% auto -4%;
+    margin-top: 20%;
+  }
+}
+@media (min-width: 345px) and (max-width: 497px) {
+  #header {
+    min-height: 90px;
+    overflow: hidden;
+  }
+
+  #menu,
+  #menu ul {
+    line-height: 50px;
+  }
+
+  #menu ul li {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  #container {
+    float: none;
+    margin-top: 23%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+  #container .left {
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+  }
+  #container .right {
+    padding: 5%;
+  }
+  #container .right h1 {
+    font-size: 19px;
+    margin-top: -24%;
+  }
+  #content2 {
+    float: none;
+    width: 100%;
+  }
+  .center-form {
+    margin-top: 25%;
+  }
+  .center-form #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;
+    float: none;
+    width: 100%;
+
+    min-height: 520px;
+
+    margin-top: 2%;
+  }
+  #content .card2 .file-input {
+    font-size: 10px;
+  }
+  .center-Error {
+    width: 60%;
+    margin-top: 36%;
+  }
+}
+@media (max-width: 345px) {
+  #header {
+    min-height: 90px;
+    overflow: hidden;
+  }
+
+  #menu,
+  #menu ul {
+    line-height: 50px;
+  }
+
+  #menu ul li {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  #container {
+    float: none;
+    margin-top: 23%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+  #container .left {
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+  }
+  #container .right {
+    padding: 5%;
+  }
+  #container .right h1 {
+    font-size: 19px;
+    margin-top: -36%;
+  }
+  #content2 {
+    float: none;
+    width: 100%;
+  }
+  .center-form {
+    margin-top: 35%;
+  }
+  .center-form #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;
+    float: none;
+    width: 100%;
+
+    min-height: 520px;
+
+    margin-top: 2%;
+  }
+  #content .card2 .file-input {
+    font-size: 8px;
+  }
+  .center-Error {
+    width: 60%;
+    margin-top: 36%;
   }
 }
