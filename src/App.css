@@ -782,6 +782,8 @@ textarea {
   }
   #content2 {
     margin-top: 95%;
+    float: none;
+    width: 100%;
   }
   .center-form {
     margin-top: 30%;
